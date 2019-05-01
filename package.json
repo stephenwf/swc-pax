@@ -1,0 +1,16 @@
+{
+  "name": "swc-pax",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "swc ./src -d ./lib && px -E ./lib/index.js ./dist/bundle.js",
+    "watch": "swc --watch ./src -d ./lib",
+    "watch-bundle": "px -E -W ./lib/index.js ./dist/bundle.js"
+  },
+  "devDependencies": {
+    "@swc/cli": "0.1.18",
+    "@swc/core": "^1.0.42",
+    "chokidar": "^3.0.0"
+  }
+}
